@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-TestSozluk/Pods-TestSozluk-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/MarkdownView/MarkdownView.framework
+${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework

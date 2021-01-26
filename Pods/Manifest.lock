@@ -1,16 +1,22 @@
 PODS:
   - MarkdownView (1.6.0)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
 
 DEPENDENCIES:
-  - MarkdownView
+  - MarkdownView (~> 1.6.0)
+  - SQLite.swift (~> 0.12.0)
 
 SPEC REPOS:
   trunk:
     - MarkdownView
+    - SQLite.swift
 
 SPEC CHECKSUMS:
   MarkdownView: 25c1c2d7ff9706624a575556296e188be3dd3f6b
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
 
-PODFILE CHECKSUM: 13dba6a810836d7aaaf9bc9bf156479f7fe5c928
+PODFILE CHECKSUM: a24ef4c9721dfd2d1283cd114f98e02a9047bf36
 
 COCOAPODS: 1.10.1
