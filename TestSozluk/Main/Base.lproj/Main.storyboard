@@ -17,8 +17,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" systemColor="systemBlueColor"/>
+                        <color key="selectedImageTintColor" red="0.90980392160000001" green="0.40784313729999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="4ps-sc-u07" kind="relationship" relationship="viewControllers" id="4Gt-wK-OV7"/>
@@ -49,14 +48,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="155"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="wYw-rp-GwZ" userLabel="Term">
-                                                    <rect key="frame" x="20" y="60" width="100" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="wYw-rp-GwZ" userLabel="Term">
+                                                    <rect key="frame" x="20" y="20" width="100" height="115"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPS-GX-2V9" userLabel="Meaning">
-                                                    <rect key="frame" x="140" y="62" width="254" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPS-GX-2V9" userLabel="Meaning">
+                                                    <rect key="frame" x="140" y="20" width="254" height="115"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" systemColor="systemIndigoColor"/>
                                                     <nil key="highlightedColor"/>
@@ -65,12 +64,14 @@
                                             <constraints>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="wYw-rp-GwZ" secondAttribute="bottom" constant="20" id="5It-SH-KH9"/>
                                                 <constraint firstItem="wYw-rp-GwZ" firstAttribute="top" secondItem="rsa-dM-vRC" secondAttribute="top" constant="20" id="6Dq-vl-6Jc"/>
-                                                <constraint firstItem="dPS-GX-2V9" firstAttribute="leading" secondItem="rsa-dM-vRC" secondAttribute="leading" constant="140" id="9D1-3b-Iiq"/>
+                                                <constraint firstItem="dPS-GX-2V9" firstAttribute="leading" secondItem="rsa-dM-vRC" secondAttribute="leading" constant="140" id="9D1-3b-Iiq" userLabel="Meaning.leading = leading + 120"/>
                                                 <constraint firstItem="dPS-GX-2V9" firstAttribute="top" secondItem="rsa-dM-vRC" secondAttribute="top" constant="20" id="Cpq-4g-Sdx"/>
-                                                <constraint firstAttribute="trailing" secondItem="dPS-GX-2V9" secondAttribute="trailing" constant="20" id="aCe-UH-Tg6"/>
+                                                <constraint firstAttribute="trailing" secondItem="dPS-GX-2V9" secondAttribute="trailing" constant="20" id="aCe-UH-Tg6" userLabel="trailing = Meaning.trailing + 10"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dPS-GX-2V9" secondAttribute="bottom" constant="20" id="aKh-FE-T3b"/>
-                                                <constraint firstItem="dPS-GX-2V9" firstAttribute="leading" secondItem="wYw-rp-GwZ" secondAttribute="trailing" priority="750" constant="20" id="fw8-Kd-wEm"/>
-                                                <constraint firstItem="wYw-rp-GwZ" firstAttribute="leading" secondItem="rsa-dM-vRC" secondAttribute="leading" constant="20" id="yRW-ra-JBo"/>
+                                                <constraint firstItem="dPS-GX-2V9" firstAttribute="leading" secondItem="wYw-rp-GwZ" secondAttribute="trailing" priority="750" constant="20" id="fw8-Kd-wEm" userLabel="Meaning.leading = Term.trailing + 10 @750"/>
+                                                <constraint firstItem="wYw-rp-GwZ" firstAttribute="centerY" secondItem="rsa-dM-vRC" secondAttribute="centerY" id="gPX-h8-Uk9"/>
+                                                <constraint firstItem="dPS-GX-2V9" firstAttribute="centerY" secondItem="rsa-dM-vRC" secondAttribute="centerY" id="kMh-fG-V4f"/>
+                                                <constraint firstItem="wYw-rp-GwZ" firstAttribute="leading" secondItem="rsa-dM-vRC" secondAttribute="leading" constant="20" id="yRW-ra-JBo" userLabel="Term.leading = leading + 10"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -126,18 +127,24 @@
                                     <constraint firstAttribute="height" constant="100" id="zlB-Em-nly"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" contentMode="scaleToFill" editable="NO" text="License" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oep-Ud-A8v">
-                                <rect key="frame" x="13" y="204" width="381" height="580"/>
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oep-Ud-A8v">
+                                <rect key="frame" x="13" y="204" width="381" height="609"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" notEnabled="YES"/>
                                 </accessibility>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="14"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="License">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="15" name="Optima-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.25" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqt-m5-aPL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqt-m5-aPL">
                                 <rect key="frame" x="114" y="126" width="78" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="License">
                                         <attributes>
@@ -153,7 +160,11 @@
                         <viewLayoutGuide key="safeArea" id="ETk-p0-zw8"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ETk-p0-zw8" firstAttribute="bottom" secondItem="Oep-Ud-A8v" secondAttribute="bottom" constant="29" id="TN3-j5-spB"/>
+                            <constraint firstItem="rqt-m5-aPL" firstAttribute="leading" secondItem="YyH-6Q-WDh" secondAttribute="trailing" constant="8" id="38j-i5-IR7"/>
+                            <constraint firstItem="ETk-p0-zw8" firstAttribute="trailing" secondItem="rqt-m5-aPL" secondAttribute="trailing" constant="222" id="JmC-GC-XQ2"/>
+                            <constraint firstItem="ETk-p0-zw8" firstAttribute="bottom" secondItem="Oep-Ud-A8v" secondAttribute="bottom" id="TN3-j5-spB"/>
+                            <constraint firstItem="rqt-m5-aPL" firstAttribute="top" secondItem="ETk-p0-zw8" secondAttribute="top" constant="82" id="UOd-li-eON"/>
+                            <constraint firstItem="rqt-m5-aPL" firstAttribute="centerY" secondItem="YyH-6Q-WDh" secondAttribute="centerY" id="X3h-jN-sOv"/>
                             <constraint firstItem="Oep-Ud-A8v" firstAttribute="leading" secondItem="ETk-p0-zw8" secondAttribute="leading" constant="13" id="fjc-yY-ahG"/>
                             <constraint firstItem="YyH-6Q-WDh" firstAttribute="leading" secondItem="ETk-p0-zw8" secondAttribute="leading" constant="6" id="kSb-1G-mCQ" userLabel="license.leading = Safe Area.leading + 20"/>
                             <constraint firstItem="Oep-Ud-A8v" firstAttribute="trailing" secondItem="tEY-6G-n2Q" secondAttribute="trailingMargin" id="mNY-fa-osS"/>
@@ -161,8 +172,8 @@
                             <constraint firstItem="YyH-6Q-WDh" firstAttribute="top" secondItem="ETk-p0-zw8" secondAttribute="top" constant="40" id="nMy-P2-9WY"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="License" selectedImage="bookmark.circle" catalog="system" id="fBd-bH-7z3">
-                        <imageReference key="image" image="bookmark.circle.fill" catalog="system" symbolScale="large"/>
+                    <tabBarItem key="tabBarItem" title="License" selectedImage="bookmark.fill" catalog="system" id="fBd-bH-7z3">
+                        <imageReference key="image" image="bookmark" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <connections>
                         <outlet property="licenseTv" destination="Oep-Ud-A8v" id="ZHI-gf-cnl"/>
@@ -181,22 +192,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleAspectFit" customUserAgent="chrome" translatesAutoresizingMaskIntoConstraints="NO" id="AhV-4W-zt4" customClass="MarkdownView" customModule="MarkdownView">
-                                <rect key="frame" x="0.0" y="204" width="414" height="596"/>
+                                <rect key="frame" x="0.0" y="204" width="414" height="609"/>
                                 <wkWebViewConfiguration key="configuration" applicationNameForUserAgent="">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences" javaScriptCanOpenWindowsAutomatically="YES"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="dictionary" translatesAutoresizingMaskIntoConstraints="NO" id="tyd-FD-wYr">
-                                <rect key="frame" x="6" y="84" width="100" height="100"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dictionary" translatesAutoresizingMaskIntoConstraints="NO" id="tyd-FD-wYr">
+                                <rect key="frame" x="5" y="84" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="BW7-vd-VNN"/>
                                     <constraint firstAttribute="width" constant="100" id="iIx-Qd-t74"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvR-ts-jlC">
-                                <rect key="frame" x="114" y="120" width="146" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvR-ts-jlC">
+                                <rect key="frame" x="113" y="122" width="121.5" height="24"/>
                                 <attributedString key="attributedText">
                                     <fragment content="Neden Sözlük">
                                         <attributes>
@@ -212,14 +222,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="AhV-4W-zt4" firstAttribute="leading" secondItem="VR0-1J-f3q" secondAttribute="leading" id="4cj-q5-jA9"/>
+                            <constraint firstItem="cvR-ts-jlC" firstAttribute="centerY" secondItem="tyd-FD-wYr" secondAttribute="centerY" id="80y-WY-oBX"/>
                             <constraint firstItem="tyd-FD-wYr" firstAttribute="leading" secondItem="5Ga-mU-vWr" secondAttribute="leading" constant="5" id="Jgn-6B-oEn" userLabel="Dictionary Img.leading = Safe Area.leading + 20"/>
                             <constraint firstItem="tyd-FD-wYr" firstAttribute="top" secondItem="5Ga-mU-vWr" secondAttribute="top" constant="40" id="PTg-uk-81L"/>
-                            <constraint firstItem="5Ga-mU-vWr" firstAttribute="bottom" secondItem="AhV-4W-zt4" secondAttribute="bottom" constant="13" id="c0a-TK-78k"/>
+                            <constraint firstItem="cvR-ts-jlC" firstAttribute="leading" secondItem="tyd-FD-wYr" secondAttribute="trailing" constant="8" id="W41-Uu-guH"/>
+                            <constraint firstItem="5Ga-mU-vWr" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="cvR-ts-jlC" secondAttribute="trailing" symbolic="YES" id="WK6-B7-Vbo"/>
+                            <constraint firstItem="5Ga-mU-vWr" firstAttribute="bottom" secondItem="AhV-4W-zt4" secondAttribute="bottom" id="c0a-TK-78k"/>
                             <constraint firstAttribute="trailing" secondItem="AhV-4W-zt4" secondAttribute="trailing" id="h3c-8f-SaN"/>
                             <constraint firstItem="AhV-4W-zt4" firstAttribute="top" secondItem="tyd-FD-wYr" secondAttribute="bottom" constant="20" id="nyb-so-l5r"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="house.fill" catalog="system" selectedImage="house" id="mUX-16-OiV"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="house" catalog="system" selectedImage="house.fill" id="mUX-16-OiV"/>
                     <connections>
                         <outlet property="dictionaryImg" destination="tyd-FD-wYr" id="WvZ-og-0nL"/>
                         <outlet property="readmeMd" destination="AhV-4W-zt4" id="616-b8-qNk"/>
@@ -233,8 +246,8 @@
         <scene sceneID="rte-HH-miS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JQA-Og-j8V" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sözlük" selectedImage="book" catalog="system" id="Y2m-d7-nmz">
-                        <imageReference key="image" image="book.circle" catalog="system" symbolScale="large"/>
+                    <tabBarItem key="tabBarItem" title="Sözlük" selectedImage="book.fill" catalog="system" id="Y2m-d7-nmz">
+                        <imageReference key="image" image="book" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gS7-K2-ve5">
@@ -253,18 +266,15 @@
     </scenes>
     <resources>
         <image name="book" catalog="system" width="128" height="102"/>
-        <image name="book.circle" catalog="system" width="128" height="121"/>
-        <image name="bookmark.circle" catalog="system" width="128" height="121"/>
-        <image name="bookmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="book.fill" catalog="system" width="128" height="102"/>
+        <image name="bookmark" catalog="system" width="112" height="128"/>
+        <image name="bookmark.fill" catalog="system" width="112" height="128"/>
         <image name="dictionary" width="512" height="512"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="license" width="512" height="512"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
