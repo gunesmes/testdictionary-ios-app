@@ -28,6 +28,7 @@
 		FF56F32B25A9BD7300C22CE8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF56F32A25A9BD7300C22CE8 /* HomeViewController.swift */; };
 		FF56F32E25A9CD5700C22CE8 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF56F32D25A9CD5700C22CE8 /* Home.swift */; };
 		FFD5814925B236A30069E583 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD5814825B236A30069E583 /* LaunchScreen.storyboard */; };
+		FFE318D225C0A64F00C5F72C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE318D125C0A64F00C5F72C /* Extensions.swift */; };
 		FFEC451725AF975000F2F889 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC451625AF975000F2F889 /* License.swift */; };
 		FFEC451A25AF97D600F2F889 /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFEC451925AF97D600F2F889 /* LicenseViewController.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		FF56F32A25A9BD7300C22CE8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FF56F32D25A9CD5700C22CE8 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		FFD5814825B236A30069E583 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FFE318D125C0A64F00C5F72C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FFEC451625AF975000F2F889 /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
 		FFEC451925AF97D600F2F889 /* LicenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +118,7 @@
 				C96AB85822D5E56A00AAF39E /* Controllers */,
 				C96AB83822D5E24800AAF39E /* Networking */,
 				C96AB83722D5E03300AAF39E /* Main */,
+				FFE318D025C0A60B00C5F72C /* Extensions */,
 				C96AB83622D5E00D00AAF39E /* Resources */,
 			);
 			path = TestSozluk;
@@ -217,6 +220,14 @@
 				C96AB85C22D5F7D300AAF39E /* TermsCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		FFE318D025C0A60B00C5F72C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FFE318D125C0A64F00C5F72C /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +353,7 @@
 				FFEC451A25AF97D600F2F889 /* LicenseViewController.swift in Sources */,
 				C96AB84822D5E24800AAF39E /* ParameterEncoding.swift in Sources */,
 				FF56F32B25A9BD7300C22CE8 /* HomeViewController.swift in Sources */,
+				FFE318D225C0A64F00C5F72C /* Extensions.swift in Sources */,
 				C96AB85422D5E26300AAF39E /* MainEndpoint.swift in Sources */,
 				C96AB84B22D5E24800AAF39E /* NetworkManager.swift in Sources */,
 				C96AB84E22D5E24800AAF39E /* HTTPTask.swift in Sources */,

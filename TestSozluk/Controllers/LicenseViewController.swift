@@ -16,12 +16,13 @@ final class LicenseViewController: UIViewController {
 
     private var license: License? {
         didSet {
-            licenseTv.text = license?.license
+            licenseTv.text = license?.license.replacingOccurrences(of: "(?<!\\n)\\n(?!\\n)", with: " ", options: [.regularExpression])
         }
     }
 
     override func viewDidLoad() {
         title = "License"
+        licenseTv.isEditable = false
 
         networkManager.getLicense { (license, errorMessage) in
             DispatchQueue.main.async { [self] in

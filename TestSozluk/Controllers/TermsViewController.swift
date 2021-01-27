@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 final class TermsViewController: UIViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -33,7 +34,7 @@ final class TermsViewController: UIViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
+        hideKeyboardWhenTappedAround()
         
         networkManager.getTerms { [weak self] (terms, errorMessage) in
             DispatchQueue.main.async {
@@ -75,10 +76,10 @@ extension TermsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        let color = UIColor()
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TermsCell.self)) as! TermsCell
-
-        cell.backgroundColor = indexPath.row % 2 == 0 ? hexStringToUIColor(hex: "#F3F0EF") : .white
+        
+        cell.backgroundColor = indexPath.row % 2 == 0 ? color.hexStringToUIColor(hex: "#F3F0EF") : .white
         
         if let term = terms?[indexPath.row] {
             cell.termLabel.text = term.term
@@ -88,38 +89,4 @@ extension TermsViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-}
-
-func hexStringToUIColor (hex:String) -> UIColor {
-    var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-
-    if (cString.hasPrefix("#")) {
-        cString.remove(at: cString.startIndex)
-    }
-
-    if ((cString.count) != 6) {
-        return UIColor.gray
-    }
-
-    var rgbValue:UInt64 = 0
-    Scanner(string: cString).scanHexInt64(&rgbValue)
-
-    return UIColor(
-        red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-        green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-        blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
-        alpha: CGFloat(1.0)
-    )
-}
-
-extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
 }
